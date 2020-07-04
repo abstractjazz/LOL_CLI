@@ -2,6 +2,8 @@
 
 class LOL_CLI::CLI 
 
+def call 
+
 puts "I just flew in from Albuquerque, and boy are my params tired."
 
 sleep 2 
