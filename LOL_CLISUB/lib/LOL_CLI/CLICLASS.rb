@@ -7,13 +7,13 @@ def call
 
 puts "I just flew in from Albuquerque, and boy are my params tired."
 
-sleep 2 
+sleep 3 
 
 puts "But enough about me."
 
-sleep 1
+sleep 2
 
-"How many jokes would you like to see? Pick a number from 1-75."
+puts "How many jokes would you like to see? Pick a number from 1-75."
 
   end 
 end 
