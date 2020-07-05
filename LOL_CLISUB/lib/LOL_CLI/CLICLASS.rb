@@ -11,7 +11,7 @@ sleep 3
 
 puts "But enough about me."
 
-sleep 2
+sleep 2.2
 
 puts "How many jokes would you like to see? Pick a number from 1-75."
 
