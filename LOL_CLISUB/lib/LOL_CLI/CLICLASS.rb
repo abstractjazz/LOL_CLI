@@ -13,7 +13,7 @@ end
 def get_jokes 
   
   @jokes = LOL_CLI::RD_jokes.all
-  
+end 
   
  def goodbye
   puts "It's been a pleasure. Be sure to tip your programmer."
