@@ -3,14 +3,26 @@ class LOL_CLI::RD_jokes
 attr_accessor :name, :setup, :punchline, :url 
   
 def self.all 
+#Scrape RD and return jokes from the site 
 
-#returns instances of jokes 
+self.scrape_jokes
 
-  # puts "What's the best thing about Switzerland?" 
-  # sleep 2.2
-  # puts "I don't know, but the flag is a big plus."  
- 
- joke_1 = self.new 
+end 
+
+
+def self.scrape_deals 
+deals = [ ]
+
+
+deals 
+
+
+#go to RD, find the joke_1
+#extract the properties 
+#instatiate a joke 
+
+joke_1 = self.new 
+ joke_1.name = "Switzerland"
  joke_1.setup = "What's the best thing about Switzerland?"
  joke_1.punchline = "I don't know, but the flag is a big plus."
  joke_1.url = "https://www.rd.com/list/short-jokes/"
@@ -21,7 +33,18 @@ def self.all
  joke_2.punchline = "Plagiarism!"
  joke_2.url = "https://www.rd.com/list/short-jokes/"
 
-[joke_1, joke_2]
+[joke_1, joke_2]  
+
+  end 
+end 
+
+#returns instances of jokes 
+
+  # puts "What's the best thing about Switzerland?" 
+  # sleep 2.2
+  # puts "I don't know, but the flag is a big plus."  
+ 
+ 
 
  end 
 end 
