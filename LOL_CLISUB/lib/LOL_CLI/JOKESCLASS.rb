@@ -1,17 +1,16 @@
 class LOL_CLI::RD_jokes
 
-attr_accessor :name, :setup, :punchline, :url 
+attr_accessor :setup, :punchline, :url 
   
 def self.all 
 
 #returns instances of jokes 
 
-  puts "What's the best thing about Switzerland?" 
-  sleep 2.2
-  puts "I don't know, but the flag is a big plus."  
+  # puts "What's the best thing about Switzerland?" 
+  # sleep 2.2
+  # puts "I don't know, but the flag is a big plus."  
  
  joke_1 = self.new 
- joke_1.name = "Switzerland"
  joke_1.setup = "What's the best thing about Switzerland?"
  joke_1.punchline = "I don't know, but the flag is a big plus."
  joke_1.url = "https://www.rd.com/list/short-jokes/"

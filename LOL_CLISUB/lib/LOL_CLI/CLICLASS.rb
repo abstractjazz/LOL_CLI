@@ -11,7 +11,6 @@ def call
 end 
   
 def list_jokes 
-  
   @jokes = LOL_CLI::RD_jokes.all
 end 
   
@@ -38,11 +37,12 @@ def menu
   menu
   else 
   list_jokes 
-#puts @jokes[input.to_i-1]
   sleep 4.2 
   more_jokes
     end 
   end 
 end 
 
+#for retreiving joke after selection 
+#puts @jokes[input.to_i-1] 
   
