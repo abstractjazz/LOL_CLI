@@ -1,6 +1,6 @@
 class LOL_CLI::RD_jokes
 
-attr_accessor :setup, :punchline, :url 
+attr_accessor :name, :setup, :punchline, :url 
   
 def self.all 
 
