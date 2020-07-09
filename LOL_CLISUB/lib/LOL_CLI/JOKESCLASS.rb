@@ -10,11 +10,11 @@ self.scrape_jokes
 end 
 
 
-def self.scrape_deals 
-deals = [ ]
+def self.scrape_jokes 
+jokes = [ ]
 
 
-deals << self.scrape_jokes 
+jokes << self.scrape_jokes 
 
 #go to RD, find the joke_1
 #extract the properties 
@@ -40,8 +40,8 @@ deals
   
   def self.scrape_jokes
     doc = Nokogiri::HTML(open("https://www.rd.com/list/short-jokes/"))  
-  
-  
+  binding.pry
+  end 
 end 
 
 #returns instances of jokes 
