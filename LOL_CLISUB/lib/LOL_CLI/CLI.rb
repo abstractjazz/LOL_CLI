@@ -12,10 +12,10 @@ end
   
 def list_jokes 
   @RD_jokes = LOL_CLI::RD_jokes.all
-  @RD_jokes.each.with_index(1) do |joke, i|
-    puts "#{i}. #{joke.name}"
+  # @RD_jokes.each.with_index(1) do |joke, i|
+  # puts "#{i}. #{joke.name}"
   end
-end 
+# end 
   
  def goodbye
   puts "It's been a pleasure. Be sure to tip your programmer."
@@ -31,6 +31,23 @@ def more_jokes
     menu
     end 
   end 
+  
+def menu
+  puts "Pick a joke from 1-75."
+  list_jokes
+  input = gets.strip 
+  if input.to_i > 75 || input.to_i < 1
+  puts "Is this thing on?"
+  menu_reset
+  else 
+  joke_delivery = @RD_jokes[input.to_i-1] 
+  puts "#{joke_delivery.setup}"  
+  sleep 2.75
+  puts "#{joke_delivery.punchline}"
+  sleep 3.8 
+  more_jokes
+    end 
+  end 
 
 def menu
   puts "Pick a joke from 1-75."
@@ -38,7 +55,7 @@ def menu
   input = gets.strip 
   if input.to_i > 75 || input.to_i < 1
   puts "Is this thing on?"
-  menu
+  menu_reset
   else 
   joke_delivery = @RD_jokes[input.to_i-1] 
   puts "#{joke_delivery.setup}"  
