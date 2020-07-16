@@ -55,7 +55,7 @@ def menu
   input = gets.strip 
   if input.to_i > 75 || input.to_i < 1
   puts "Is this thing on?"
-  menu_reset
+ menu
   else 
   joke_delivery = @RD_jokes[input.to_i-1] 
   puts "#{joke_delivery.setup}"  
