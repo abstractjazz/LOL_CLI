@@ -8,15 +8,38 @@ def call
   puts "But enough about me."
   sleep 2.2
   menu
+  get_jokes
+  list_jokes 
 end 
   
-def list_jokes 
-  @RD_jokes = LOL_CLI::RD_jokes.all
-  # @RD_jokes.each.with_index(1) do |joke, i|
-  # puts "#{i}. #{joke.name}"
-  end
-# end 
+def get_jokes 
+  @RDjokes = LOL_CLI::RDjokes.all
+ end 
   
+def list_jokes 
+ @RDjokes.each.with_index(1) do |joke, index|
+ puts "#{index}. #{joke.name}"
+  end
+end 
+
+def menu
+  puts "Pick a joke from 1-75."
+  input = gets.strip 
+  list_jokes
+  if input.to_i > 75 || input.to_i < 1
+  puts "Is this thing on?"
+  menu
+  else 
+  joke_delivery = @RDjokes[input.to_i-1] 
+  puts "#{joke_delivery.setup}"  
+  sleep 2.75
+  puts "#{joke_delivery.punchline}"
+  sleep 3.8 
+  more_jokes
+    end 
+  end 
+
+
  def goodbye
   puts "It's been a pleasure. Be sure to tip your programmer."
   end 
@@ -32,40 +55,23 @@ def more_jokes
     end 
   end 
   
-def menu
-  puts "Pick a joke from 1-75."
-  list_jokes
-  input = gets.strip 
-  if input.to_i > 75 || input.to_i < 1
-  puts "Is this thing on?"
-  menu
-  else 
-  joke_delivery = @RD_jokes[input.to_i-1] 
-  puts "#{joke_delivery.setup}"  
-  sleep 2.75
-  puts "#{joke_delivery.punchline}"
-  sleep 3.8 
-  more_jokes
-    end 
-  end 
-
-def menu
-  puts "Pick a joke from 1-75."
-  list_jokes
-  input = gets.strip 
-  if input.to_i > 75 || input.to_i < 1
-  puts "Is this thing on?"
- menu
-  else 
-  joke_delivery = @RD_jokes[input.to_i-1] 
-  puts "#{joke_delivery.setup}"  
-  sleep 2.75
-  puts "#{joke_delivery.punchline}"
+# def menu
+#   puts "Pick a joke from 1-75."
+#   list_jokes
+#   input = gets.strip 
+#   if input.to_i > 75 || input.to_i < 1
+#   puts "Is this thing on?"
+# menu
+#   else 
+#   joke_delivery = @RD_jokes[input.to_i-1] 
+#   puts "#{joke_delivery.setup}"  
+#   sleep 2.75
+#   puts "#{joke_delivery.punchline}"
  
-  sleep 3.8 
-  more_jokes
-    end 
-  end 
+#   sleep 3.8 
+#   more_jokes
+#     end 
+#   end 
 end 
 
 
