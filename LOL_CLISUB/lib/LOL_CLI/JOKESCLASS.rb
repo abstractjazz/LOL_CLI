@@ -2,7 +2,6 @@ class LOL_CLI::RDjokes
 
 attr_accessor :name, :setup, :punchline
 
-  
 def self.all 
 #Scrape RD and return jokes from the site 
 
@@ -27,9 +26,9 @@ end
     joke = self.new
     joke.name = doc.search("h2").text
     joke.setup = doc.css("h2").text
-    # punchline = doc.search("h2").text
+#punchline = doc.search("h2").text
     joke 
-    #binding.pry
+   
   end 
 end 
 

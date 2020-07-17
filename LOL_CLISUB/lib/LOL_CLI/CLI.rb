@@ -8,24 +8,16 @@ def call
   puts "But enough about me."
   sleep 2.2
   menu
-  get_jokes
-  list_jokes 
+  # get_jokes
+  # list_jokes 
 end 
   
-def get_jokes 
-  @RDjokes = LOL_CLI::RDjokes.all
- end 
   
-def list_jokes 
- @RDjokes.each.with_index(1) do |joke, index|
- puts "#{index}. #{joke.name}"
-  end
-end 
-
 def menu
   puts "Pick a joke from 1-75."
-  input = gets.strip 
   list_jokes
+  input = gets.strip 
+  # binding.pry
   if input.to_i > 75 || input.to_i < 1
   puts "Is this thing on?"
   menu
@@ -38,6 +30,13 @@ def menu
   more_jokes
     end 
   end 
+
+def list_jokes 
+ @RDjokes = LOL_CLI::RDjokes.all
+ @RDjokes.each.with_index(1) do |joke, index|
+ puts "#{index}. #{joke.name}"
+  end
+end 
 
 
  def goodbye
