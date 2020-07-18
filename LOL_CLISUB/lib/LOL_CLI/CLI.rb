@@ -17,7 +17,7 @@ def menu
   puts "Pick a joke from 1-75."
   list_jokes
   input = gets.strip 
-  # binding.pry
+  binding.pry
   if input.to_i > 75 || input.to_i < 1
   puts "Is this thing on?"
   menu

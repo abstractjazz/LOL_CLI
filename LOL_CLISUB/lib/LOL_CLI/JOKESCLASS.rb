@@ -20,16 +20,19 @@ jokes
 end 
   
   def self.scrape_rd
-  
+  results = [ ]
     doc = Nokogiri::HTML(open("https://www.rd.com/list/short-jokes/")) 
    
     joke = self.new
     joke.name = doc.search("h2").text
     joke.setup = doc.css("h2").text
 #punchline = doc.search("h2").text
-    joke 
+    results << joke 
+    results
    
   end 
+  
+ 
 end 
 
 
